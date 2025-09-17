@@ -1,0 +1,8 @@
+﻿services:
+  tasktracker.api:
+    image: tasktracker.api
+    build:
+      context: .
+      dockerfile: src/TaskTracker.Api/Dockerfile
+    ports:
+      - "5001:5001"

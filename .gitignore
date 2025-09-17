@@ -1,0 +1,13 @@
+.env
+.bin
+.obj
+TaskTracker.sln.DotSettings.user
+src/TaskTracker.Api/bin/
+src/TaskTracker.Api/obj/
+src/TaskTracker.Application/bin/
+src/TaskTracker.Application/obj/
+src/TaskTracker.Domain/bin/
+src/TaskTracker.Domain/obj/
+src/TaskTracker.Infrastructure/bin/
+src/TaskTracker.Infrastructure/obj/
+.idea/
