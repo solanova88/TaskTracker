@@ -1,8 +1,35 @@
 ﻿services:
   tasktracker.api:
-    image: tasktracker.api
     build:
       context: .
       dockerfile: src/TaskTracker.Api/Dockerfile
     ports:
       - "5001:5001"
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=tasktracker.db;Port=5432;Database=TaskTrackerDb;Username=postgres;Password=admin
+    depends_on:
+      - tasktracker.db
+
+  tasktracker.db:
+    image: postgres:16
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: TaskTrackerDb
+    ports:
+      - "5432:5432"
+    volumes:
+      - tasktracker_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+
+volumes:
+  tasktracker_data:
