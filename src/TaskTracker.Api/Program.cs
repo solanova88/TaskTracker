@@ -10,6 +10,7 @@ builder.Services
 	.ConfigureMediatR()
 	.ConfigureRepositories()
 	.ConfigureSettings(builder.Configuration)
+	.ConfigureAuthentication(builder.Configuration)
 	.RegisterServices();
 
 var app = builder.Build();
@@ -21,6 +22,9 @@ if (app.Environment.IsDevelopment())
 	app.UseSwagger();
 	app.UseSwaggerUI();
 }
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 app.UseMiddleware<JwtContextMiddleware>();

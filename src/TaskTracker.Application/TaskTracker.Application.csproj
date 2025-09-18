@@ -16,4 +16,8 @@
       <ProjectReference Include="..\TaskTracker.Domain\TaskTracker.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
 </Project>
