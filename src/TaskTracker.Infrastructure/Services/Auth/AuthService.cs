@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using TaskTracker.Application.Interfaces.Auth;
 using TaskTracker.Application.Interfaces.Cookies;
-using TaskTracker.Application.Queries.User.SignIn;
+using TaskTracker.Application.Queries.Users.SignIn;
 
 namespace TaskTracker.Infrastructure.Services.Auth;
 

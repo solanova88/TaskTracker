@@ -8,6 +8,7 @@ builder.Services
 	.ConfigureSwagger()
 	.ConfigureDbContext(builder.Configuration)
 	.ConfigureMediatR()
+	.ConfigureMapping()
 	.ConfigureRepositories()
 	.ConfigureSettings(builder.Configuration)
 	.ConfigureAuthentication(builder.Configuration)

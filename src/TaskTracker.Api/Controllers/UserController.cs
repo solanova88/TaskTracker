@@ -1,6 +1,6 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using TaskTracker.Application.Queries.User.SignIn;
+using TaskTracker.Application.Queries.Users.SignIn;
 
 namespace TaskTracker.Api.Controllers;
 

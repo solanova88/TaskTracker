@@ -15,7 +15,7 @@ public class WorkTask : BaseEntity
 	public Guid? ParentTaskId { get; set; }
 	[ForeignKey(nameof(ParentTaskId))]
 	public virtual WorkTask ParentWorkTask { get; set; }
-	protected virtual ICollection<WorkTask> Subtasks { get; set; } = new List<WorkTask>();
+	public virtual ICollection<WorkTask> Subtasks { get; set; } = new List<WorkTask>();
 	public virtual ICollection<WorkTaskRelation> RelatedTo { get; set; } = new List<WorkTaskRelation>();
 	public virtual ICollection<WorkTaskRelation> RelatedFrom { get; set; } = new List<WorkTaskRelation>();
 	public bool HasSubtasks => Subtasks.Count > 0;

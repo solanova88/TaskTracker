@@ -29,8 +29,8 @@ public class CookieManagementService : ICookieManagementService
 		
 		var cookiePayload = GetCookiePayload(userName);
 		
-		_httpContextAccessor.HttpContext.Response.Cookies.Append("access_token", cookiePayload.ResultData.Jwt,
-			cookiePayload.ResultData.CookieOptions);
+		_httpContextAccessor.HttpContext.Response.Cookies.Append("access_token", cookiePayload.Value.Jwt,
+			cookiePayload.Value.CookieOptions);
 		
 		return true;
 	}

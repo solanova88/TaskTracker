@@ -1,9 +1,9 @@
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using TaskTracker.Application.Interfaces.Auth;
-using TaskTracker.Application.Queries.User.SignIn;
+using TaskTracker.Application.Queries.Users.SignIn;
 
-namespace TaskTracker.Application.Handlers.User.SignIn;
+namespace TaskTracker.Application.Handlers.Users.SignIn;
 
 public class SignInQueryHandler :  IRequestHandler<SignInQuery, SignInResult>
 {

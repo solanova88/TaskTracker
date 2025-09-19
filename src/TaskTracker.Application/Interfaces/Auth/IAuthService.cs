@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Identity;
-using TaskTracker.Application.Queries.User.SignIn;
+using TaskTracker.Application.Queries.Users.SignIn;
 
 namespace TaskTracker.Application.Interfaces.Auth;
 
